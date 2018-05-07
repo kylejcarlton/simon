@@ -24,11 +24,23 @@ yellow: #c7a618
 	-moz-border-radius: 250px;
 	-webkit-border-radius: 250px;
 	border-radius: 50%;
+}/* Cleaner, but slightly less support: use "50%" as value https://css-tricks.com/examples/ShapesOfCSS/ */
+#controls {
+  background: #323230;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: 150px;
+
+}
+#buttons {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}/* Cleaner, but slightly less support: use "50%" as value https://css-tricks.com/examples/ShapesOfCSS/ */
-
+}
 #green {
   width: 200px;
   height: 200px;
