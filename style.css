@@ -8,6 +8,7 @@ body,html {
 https://stackoverflow.com/questions/42234855/is-it-possible-to-draw-a-partial-circle-outline-in-css-open-ring-shape
 http://jsfiddle.net/hashem/u78bQ/2/ - half-circle
 http://dabblet.com/gist/5476973 https://stackoverflow.com/questions/16263358/quarter-of-a-ring-with-css-and-html - quarter circles
+https://stackoverflow.com/questions/20588203/css-concentric-circles
 green: #2DA850
 red: #960d16
 blue: #3d8bfe
@@ -41,31 +42,47 @@ yellow: #c7a618
   flex-direction: row;
   flex-wrap: wrap;
 }
+#topleft {
+  width: 250px;
+  height: 250px;
+}
 #green {
-  width: 200px;
-  height: 200px;
-  margin: 25px 25px 25px 25px;
+  width: 250px;
+  height: 250px;
+  //margin: 25px 0px 25px 25px;
   background: #2DA850;
   border-radius: 100% 0 0 0;
 }
+#topright {
+  width: 250px;
+  height: 250px;
+}
 #red {
-  width: 200px;
-  height: 200px;
-  margin: 25px 25px 25px 25px;
+  width: 250px;
+  height: 250px;
+  //margin: 25px 25px 25px 25px;
   background: #960d16;
   border-radius: 0 100% 0 0;
 }
+#bottomleft {
+  width: 250px;
+  height: 250px;
+}
 #blue {
-  width: 200px;
-  height: 200px;
-  margin: 25px 25px 25px 25px;
+  width: 250px;
+  height: 250px;
+  //margin: 25px 25px 25px 25px;
   background: #3d8bfe;
   border-radius: 0 0 0 100%;
 }
+#bottomright {
+  width: 250px;
+  height: 250px;
+}
 #yellow {
-  width: 200px;
-  height: 200px;
-  margin: 25px 25px 25px 25px;
+  width: 250px;
+  height: 250px;
+  //margin: 25px 25px 25px 25px;
   background: #c7a618;
   border-radius: 0 0 100% 0;
 }
