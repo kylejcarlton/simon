@@ -1,68 +1,51 @@
-body {
+body,html {
   background-color: #dedbc8;
+  margin:0px;
+  padding:0px;
+  width:100%;
 }
-/*https://stackoverflow.com/questions/42234855/is-it-possible-to-draw-a-partial-circle-outline-in-css-open-ring-shape */
+/*
+https://stackoverflow.com/questions/42234855/is-it-possible-to-draw-a-partial-circle-outline-in-css-open-ring-shape
+http://jsfiddle.net/hashem/u78bQ/2/ - half-circle
+http://dabblet.com/gist/5476973 https://stackoverflow.com/questions/16263358/quarter-of-a-ring-with-css-and-html - quarter circles
+green: #2DA850
+red: #960d16
+blue: #3d8bfe
+yellow: #c7a618
+*/
 #main {
-  width: 310px;
+  width: 500px;
   margin: 50px auto;
 }
-#pacman {
-  width: 0px;
-  height: 0px;
-  border-right: 60px solid transparent;
-  border-top: 60px solid #2DA850;
-  border-left: 60px solid #2DA850;
-  border-bottom: 60px solid #2DA850;
-  border-top-left-radius: 60px;
-  border-top-right-radius: 60px;
-  border-bottom-left-radius: 60px;
-  border-bottom-right-radius: 60px;
-}
+#game {
+	width: 500px;
+	height: 500px;
+	background: #323230;
+	-moz-border-radius: 250px;
+	-webkit-border-radius: 250px;
+	border-radius: 250px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}/* Cleaner, but slightly less support: use "50%" as value https://css-tricks.com/examples/ShapesOfCSS/ */
+
 #green {
-  width: 0;
-  height: 0;
-  border-left: 70px solid transparent;
-  border-right: 70px solid transparent;
-  border-top: 100px solid #2DA850;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  background: #2DA850;
 }
 #red {
-  width: 0;
-  height: 0;
-  border-left: 70px solid transparent;
-  border-right: 70px solid transparent;
-  border-top: 100px solid #960d16;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  background: #960d16;
 }
 #blue {
-  width: 0;
-  height: 0;
-  border-left: 70px solid transparent;
-  border-right: 70px solid transparent;
-  border-top: 100px solid #3d8bfe;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  background: #3d8bfe;
 }
 #yellow {
-  width: 0;
-  height: 0;
-  border-left: 70px solid transparent;
-  border-right: 70px solid transparent;
-  border-top: 100px solid #c7a618;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  background: #c7a618;
 }
-#game {
-	width: 300px;
-	height: 300px;
-	background: #323230;
-	-moz-border-radius: 150px;
-	-webkit-border-radius: 150px;
-	border-radius: 150px;
-}/* Cleaner, but slightly less support: use "50%" as value https://css-tricks.com/examples/ShapesOfCSS/ */
