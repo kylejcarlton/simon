@@ -15,18 +15,18 @@ blue: #3d8bfe
 yellow: #c7a618
 */
 #main {
-  width: 500px;
+  width: 600px;
   margin: 50px auto;
 }
 #game {
-	width: 500px;
-	height: 500px;
+	width: 600px;
+	height: 600px;
 	background: #323230;
-	-moz-border-radius: 250px;
-	-webkit-border-radius: 250px;
+	-moz-border-radius: 300px;
+	-webkit-border-radius: 300px;
 	border-radius: 50%;
 }/* Cleaner, but slightly less support: use "50%" as value https://css-tricks.com/examples/ShapesOfCSS/ */
-#controls {
+/*#controls {
   background: #323230;
   width: 200px;
   height: 200px;
@@ -36,20 +36,23 @@ yellow: #c7a618
   margin-left: -100px;
   margin-top: 150px;
 
-}
+}*/
 #buttons {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding-top: 50px;
+  padding-left: 50px;
 }
 #topleft {
   width: 250px;
   height: 250px;
+  //padding: 25px 0 0 25px;
 }
 #green {
   width: 250px;
   height: 250px;
-  //margin: 25px 0px 25px 25px;
+  //margin: 50px 0px 0px 50px;
   background: #2DA850;
   border-radius: 100% 0 0 0;
 }
