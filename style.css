@@ -4,16 +4,17 @@ body,html {
   padding:0px;
   width:100%;
 }
-/*
-https://stackoverflow.com/questions/42234855/is-it-possible-to-draw-a-partial-circle-outline-in-css-open-ring-shape
-http://jsfiddle.net/hashem/u78bQ/2/ - half-circle
-http://dabblet.com/gist/5476973 https://stackoverflow.com/questions/16263358/quarter-of-a-ring-with-css-and-html - quarter circles
-https://stackoverflow.com/questions/20588203/css-concentric-circles
-green: #2DA850
-red: #960d16
-blue: #3d8bfe
-yellow: #c7a618
-*/
+h1 {
+  margin: 0;
+  padding: 20px 0 0 0;
+  font-size: 60px;
+  font-family: 'Bree Serif', serif;
+  font-weight: bolder;
+}
+p {
+  margin: 0;
+  padding: 0 5px 0 5px;
+}
 #main {
   width: 550px;
   margin: 50px auto;
@@ -25,7 +26,7 @@ yellow: #c7a618
 	-moz-border-radius: 300px;
 	-webkit-border-radius: 300px;
 	border-radius: 50%;
-}/* Cleaner, but slightly less support: use "50%" as value https://css-tricks.com/examples/ShapesOfCSS/ */
+}
 #center {
   background: #323230;
   width: 250px;
@@ -46,7 +47,6 @@ yellow: #c7a618
   display: flex;
   flex-direction: column;
 }
-
 #controls {
   display: flex;
   flex-direction: row;
@@ -81,13 +81,6 @@ yellow: #c7a618
   height: 15px;
   background-color: yellow;
 }
-h1 {
-  margin: 0;
-  padding: 20px 0 0 0;
-  font-size: 60px;
-  font-family: 'Bree Serif', serif;
-  font-weight: bolder;
-}
 #buttons {
   display: flex;
   flex-direction: row;
@@ -101,10 +94,6 @@ h1 {
   display: flex;
   justify-content: center;
   text-align: center;
-}
-p {
-  margin: 0;
-  padding: 0 5px 0 5px;
 }
 #registered {
   font-size: 13px;
@@ -152,18 +141,15 @@ p {
   background: #3d8bfe;
   border-radius: 0 0 100% 0;
 }
-
-/* The switch - the box around the slider */
+/* POWER switch - the box around the slider */
 .switch {
   position: relative;
   display: inline-block;
   width: 30px;
   height: 17px;
 }
-
 /* Hide default HTML checkbox */
 .switch input {display:none;}
-
 /* The slider */
 .slider {
   position: absolute;
@@ -176,7 +162,6 @@ p {
   -webkit-transition: .4s;
   transition: .4s;
 }
-
 .slider:before {
   position: absolute;
   content: "";
@@ -188,15 +173,12 @@ p {
   -webkit-transition: .4s;
   transition: .4s;
 }
-
 input:checked + .slider {
   background-color: #11772d;
 }
-
 input:focus + .slider {
   box-shadow: 0 0 1px #11772d;
 }
-
 input:checked + .slider:before {
   -webkit-transform: translateX(13px);
   -ms-transform: translateX(13px);
