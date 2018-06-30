@@ -18,7 +18,7 @@ p {
 .controls {
   list-style: none;
   position: absolute;
-  margin: 23px 0 0 -57px;
+  margin: 23px 0 0 -30px;
 }
 .controls li:first-child{
   margin-left: 1px; 
