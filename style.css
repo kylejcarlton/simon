@@ -15,24 +15,28 @@ p {
   margin: 0;
   padding: 0 5px 0 5px;
 }
+#controls div:nth-child(-n + 2) {
+  margin-left: 9px;
+  margin-right: 8px;
+}
 .controls {
   list-style: none;
   position: absolute;
   margin: 23px 0 0 -30px;
-}
-.controls li:first-child{
-  margin-left: 1px; 
 }
 .controls li{
   display: inline;
   font-size: 8px;
   font-family: 'Bree Serif', serif;
 }
+.controls li:first-child{
+  margin-left: 2px; 
+}
 .controls li + li{
-  margin-left: 14px;
+  margin-left: 16px;
 }
 .controls li + li + li{
-  margin-left: 13px;
+  margin-left: 7px;
 }
 .power{
   margin: -5px 0 0 0;
@@ -80,11 +84,6 @@ p {
   flex-direction: row;
   margin: 0 auto;
 }
-#controls div {
-  margin-left: 9px;
-  margin-right: 8px;
-}
-
 #count {
   width: 32px;
   height: 25px;
@@ -102,7 +101,7 @@ p {
   background-color: red;
 }
 #strict {
-  margin: 7px 0 0 0;
+  margin: 7px 0 0 12px;
   border-radius: 50%;
   border: 1px solid black;
   width: 10px;
@@ -111,7 +110,7 @@ p {
 }
 #strictled {
   position: absolute;
-  margin: 53px 0 0 102px;
+  margin: 53px 0 0 108px;
   border-radius: 50%;
   border: 2px solid black;
   border-width: 1px;
@@ -127,7 +126,7 @@ p {
   padding-left: 22px;
 }
 #power {
-  margin-top: 22px;
+  margin-top: 28px;
   width: auto;
   display: flex;
   justify-content: center;
