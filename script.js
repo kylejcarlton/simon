@@ -5,21 +5,30 @@
 
 $(document).ready(function(){
 
-  var gameOn = false;
+  var gameOn = false, strict = false;
 
   $(".slider").click(function(){
     if(gameOn == false){
       gameOn = true;
+      $("#level").html("--");
     }
     else{
       gameOn = false;
+      $("#level").html("");
     }
   });
 
-  function powerSwitch(){
+  $("#strict").click(function(){
+    if(strict == false){
+      strict = true;
+      $("#strictled").css("background-color", "red"); 
+    }
+    else{
+      strict = false;
+      $("#strictled").css("background-color", "#8B0000");
+    }
 
-  }
-
+  });
 
 
 

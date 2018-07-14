@@ -42,7 +42,7 @@ p {
   margin: -5px 0 0 0;
   font-size: 12px;
 }
-.count{
+#level{
   margin-top: 2px;
   color: red;
   font-family: 'Orbitron', sans-serif;
@@ -116,7 +116,7 @@ p {
   border-width: 1px;
   width: 5px;
   height: 5px;
-  background-color: red;
+  background-color:#8B0000;
 }
 #buttons {
   display: flex;
