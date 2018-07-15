@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  var isTouchDevice = 'ontouchstart' in document.documentElement, gameOn = false, strict = false, session = false, game = [], buttonSounds = [document.getElementById("greenSound"), document.getElementById("redSound"), document.getElementById("blueSound"),document.getElementById("yellowSound")];
+  var isTouchDevice = 'ontouchstart' in document.documentElement, gameOn = false, strict = false, session = false, huTurn = true, game = [], buttons = [{"id": "#green","color0": "#2DA850","color1": "#2dda5e","sound": "document.getElementById('greenSound')"}, {"id": "#red","color0": "#960d16","color1": "#f02936","sound": "document.getElementById('redSound')"}, {"id": "#blue","color0": "#497ecc","color1": "#3d8bfe","sound": "document.getElementById('blueSound')"}, {"id": "#yellow","color0": "#c7a618","color1": "#f3cf30","sound": "document.getElementById('yellowSound')"}];
 
   $(".slider").click(function(){
     if(gameOn == false){
@@ -28,27 +28,22 @@ $(document).ready(function(){
 
   $("#start").click(function(){
     session = true;
-    console.log(session);
   });
+
+  function buttonPress(which, state){
+    if(gameOn && session && huTurn == true){
+      console.log("which: "+which);
+      console.log("state: "+state);
+    }
+  }
  
   if(isTouchDevice){
-    $("#green").on('touchstart', function(){
-      $("#green").css("background-color", "#2dda5e");
-      buttonSounds[0].play();
-    })
-    .on('touchend', function(){
-      $("#green").css("background-color", "#2DA850");
-    });
-
+    $("#green").on('touchstart', function(){buttonPress(0, 0);})
+    .on('touchend', function(){buttonPress(0, 1);});
   }
   else{
-    $("#green").mousedown(function(){
-      $("#green").css("background-color", "#2dda5e");
-      buttonSounds[0].play();
-    })
-    .mouseup(function(){
-      $("#green").css("background-color", "#2DA850");
-    });
+    $("#green").mousedown(function(){buttonPress(0, 0);})
+    .mouseup(function(){buttonPress(0, 1);});
   }
 
   $("#red")
