@@ -32,11 +32,11 @@ $(document).ready(function(){
   });
  
   if(isTouchDevice){
-    $("#green").ontouchstart(function(){
+    $("#green").on('touchstart', function(){
       $("#green").css("background-color", "#2dda5e");
       buttonSounds[0].play();
     })
-    .ontouchend(function(){
+    .on('touchend', function(){
       $("#green").css("background-color", "#2DA850");
     });
 
