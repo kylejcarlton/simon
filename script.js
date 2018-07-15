@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  var gameOn = false, strict = false, session = false, game = [], buttonSounds = [document.getElementById("greenSound"), document.getElementById("redSound"), document.getElementById("blueSound"),document.getElementById("yellowSound")];
+  var isTouchDevice = 'ontouchstart' in document.documentElement, gameOn = false, strict = false, session = false, game = [], buttonSounds = [document.getElementById("greenSound"), document.getElementById("redSound"), document.getElementById("blueSound"),document.getElementById("yellowSound")];
 
   $(".slider").click(function(){
     if(gameOn == false){
@@ -31,14 +31,25 @@ $(document).ready(function(){
     console.log(session);
   });
  
-  $("#green")
-  .mousedown(function(){
-    $("#green").css("background-color", "#2dda5e");
-    buttonSounds[0].play();
-  })
-  .mouseup(function(){
-    $("#green").css("background-color", "#2DA850");
-  });
+  if(isTouchDevice){
+    $("#green").ontouchstart(function(){
+      $("#green").css("background-color", "#2dda5e");
+      buttonSounds[0].play();
+    })
+    .ontouchend(function(){
+      $("#green").css("background-color", "#2DA850");
+    });
+
+  }
+  else{
+    $("#green").mousedown(function(){
+      $("#green").css("background-color", "#2dda5e");
+      buttonSounds[0].play();
+    })
+    .mouseup(function(){
+      $("#green").css("background-color", "#2DA850");
+    });
+  }
 
   $("#red")
   .mousedown(function(){
