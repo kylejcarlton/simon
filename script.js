@@ -18,14 +18,16 @@ $(document).ready(function(){
     .on('touchend', function(){buttonPress(3, 0);});
   }
   
-  $("#green").mousedown(function(){buttonPress(0, 1);})
-  .mouseup(function(){buttonPress(0, 0);});
-  $("#red").mousedown(function(){buttonPress(1, 1);})
-  .mouseup(function(){buttonPress(1, 0);});
-  $("#blue").mousedown(function(){buttonPress(2, 1);})
-  .mouseup(function(){buttonPress(2, 0);});
-  $("#yellow").mousedown(function(){buttonPress(3, 1);})
-  .mouseup(function(){buttonPress(3, 0);});
+  if(isTouchDevice == false){
+    $("#green").mousedown(function(){buttonPress(0, 1);})
+    .mouseup(function(){buttonPress(0, 0);});
+    $("#red").mousedown(function(){buttonPress(1, 1);})
+    .mouseup(function(){buttonPress(1, 0);});
+    $("#blue").mousedown(function(){buttonPress(2, 1);})
+    .mouseup(function(){buttonPress(2, 0);});
+    $("#yellow").mousedown(function(){buttonPress(3, 1);})
+    .mouseup(function(){buttonPress(3, 0);});
+  }
 
   function buttonPress(which, state){
     if(gameOn && session && huTurn == true){
