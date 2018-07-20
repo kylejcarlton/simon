@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  var isTouchDevice = false, gameOn = false, session = false, huTurn = true, strict = false, game = [], buttons = [{"id": "green","color0": "2DA850","color1": "2dda5e","sound": "greenSound"}, {"id": "red","color0": "960d16","color1": "f02936","sound": "redSound"}, {"id": "blue","color0": "497ecc","color1": "3d8bfe","sound": "blueSound"}, {"id": "yellow","color0": "c7a618","color1": "f3cf30","sound": "yellowSound"}];
+  var isTouchDevice = false, gameOn = false, session = false, huTurn = true, strict = false, sequence = [], buttons = [{"id": "green","color0": "2DA850","color1": "2dda5e","sound": "greenSound"}, {"id": "red","color0": "960d16","color1": "f02936","sound": "redSound"}, {"id": "blue","color0": "497ecc","color1": "3d8bfe","sound": "blueSound"}, {"id": "yellow","color0": "c7a618","color1": "f3cf30","sound": "yellowSound"}];
 
   window.addEventListener('touchstart', function(){
     isTouchDevice = true;
@@ -25,6 +25,13 @@ $(document).ready(function(){
     $("#yellow").mousedown(function(){buttonPress(3, 1);})
     .mouseup(function(){buttonPress(3, 0);});
   });
+
+  function gameTurn(){
+    sequence.push(Math.floor(Math.random() * 10));
+    for(i = 0; i <= sequence.length; i++){
+      buttonPress(sequence[i], 1);
+    }
+  }
 
   function buttonPress(which, state){
     if(gameOn && session && huTurn == true){
@@ -61,7 +68,11 @@ $(document).ready(function(){
   });
 
   $("#start").click(function(){
-    session = true;
+    if(gameOn == true && session == false){
+      session = true;
+      gameTurn();
+    }
+    
   });
 
 }); //END DOC READY
