@@ -27,15 +27,24 @@ $(document).ready(function(){
   });
 
   function gameTurn(){
-    sequence.push(Math.floor(Math.random() * 10));
-    for(i = 0; i <= sequence.length; i++){
+    sequence.push(Math.floor(Math.random() * 4));
+    for(i = 0; i < sequence.length; i++){
       buttonPress(sequence[i], 1);
+      delayButtonPress(i);
     }
+  }
+
+  function delayButtonPress(i){
+    setTimeout(function(){
+      buttonPress(sequence[i], 0);
+      console.log(sequence[i]);
+    }, 500);
   }
 
   function buttonPress(which, state){
     if(gameOn && session && huTurn == true){
       colorState = "color"+state;
+      console.log(sequence);
       $("#" + buttons[which].id).css("background-color", "#"+buttons[which][colorState]);
       if(state == 1){
         document.getElementById(buttons[which].sound).play();
@@ -52,6 +61,7 @@ $(document).ready(function(){
       gameOn = false;
       $("#level").html("");
       session = false;
+      sequence = [];
     }
   });
 
@@ -70,6 +80,7 @@ $(document).ready(function(){
   $("#start").click(function(){
     if(gameOn == true && session == false){
       session = true;
+      $("#level").html("01");
       gameTurn();
     }
     
